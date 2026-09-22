@@ -8,12 +8,12 @@
 
   <meta
     name="description"
-    content="Bomee Lee is a Seoul-based English copywriter specializing in localization, transcreation and global creative work."
+    content="Bomee Lee is a Seoul-based English copywriter specializing in copywriting, localization, transcreation and global creative work."
   >
 
   <meta
     name="keywords"
-    content="Bomee Lee, English copywriter Korea, English copywriter Seoul, Korean copywriter, transcreation, localization, global copywriter"
+    content="Bomee Lee, English copywriter Korea, English copywriter Seoul, Korean English copywriter, copywriting, transcreation, localization, global copywriter"
   >
 
   <meta name="author" content="Bomee Lee">
@@ -37,7 +37,11 @@
     "name": "Bomee Lee",
     "alternateName": "이봄",
     "url": "https://bomee-lee.github.io/",
+    "email": "mailto:bomeelee2@naver.com",
     "jobTitle": "English Copywriter",
+    "sameAs": [
+      "https://www.linkedin.com/in/bomee-lee-b074b323a/"
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Seoul",
@@ -45,11 +49,12 @@
     },
     "knowsAbout": [
       "English Copywriting",
+      "Copywriting",
       "Transcreation",
       "Localization",
       "Global Advertising",
       "Creative Strategy",
-      "Korean to English Copywriting",
+      "Korean to English Transcreation",
       "English to Korean Localization"
     ],
     "subjectOf": [
@@ -175,6 +180,46 @@
       margin-bottom: 65px;
     }
 
+    /* WORK */
+
+    .work-category {
+      margin-top: 110px;
+    }
+
+    .work-category:first-of-type {
+      margin-top: 0;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #111111;
+      margin-bottom: 30px;
+    }
+
+    .category-title {
+      font-size: clamp(34px, 5vw, 72px);
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+
+    .category-direction {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .featured-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+    }
+
     .work-item {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
@@ -182,10 +227,6 @@
       padding: 30px 0;
       border-top: 1px solid #dddddd;
       align-items: baseline;
-    }
-
-    .work-item:last-child {
-      border-bottom: 1px solid #dddddd;
     }
 
     .work-year {
@@ -224,6 +265,37 @@
       line-height: 1.8;
     }
 
+    .video-project {
+      margin-top: 55px;
+    }
+
+    .video-project-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: baseline;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .video-project-name {
+      font-size: clamp(24px, 3vw, 40px);
+      letter-spacing: -0.03em;
+    }
+
+    .video-project-number {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    .empty-category {
+      font-size: 16px;
+      opacity: 0.45;
+      padding: 25px 0;
+    }
+
+    /* ABOUT */
+
     .about-text {
       max-width: 980px;
       font-size: clamp(26px, 3.6vw, 52px);
@@ -234,6 +306,8 @@
     .about-text p + p {
       margin-top: 35px;
     }
+
+    /* AWARDS */
 
     .awards {
       max-width: 1000px;
@@ -303,6 +377,8 @@
       line-height: 1;
     }
 
+    /* CONTACT */
+
     .contact-title {
       font-size: clamp(50px, 9vw, 130px);
       line-height: 0.95;
@@ -313,7 +389,43 @@
     .contact-note {
       margin-top: 40px;
       font-size: 18px;
-      max-width: 600px;
+      max-width: 650px;
+      line-height: 1.6;
+    }
+
+    .contact-links {
+      margin-top: 60px;
+      border-top: 1px solid #dddddd;
+    }
+
+    .contact-link {
+      display: grid;
+      grid-template-columns: 160px 1fr 60px;
+      gap: 40px;
+      padding: 28px 0;
+      border-bottom: 1px solid #dddddd;
+      align-items: center;
+      transition: opacity 0.2s ease;
+    }
+
+    .contact-link:hover {
+      opacity: 0.5;
+    }
+
+    .contact-link-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .contact-link-value {
+      font-size: clamp(20px, 2.2vw, 32px);
+      letter-spacing: -0.025em;
+    }
+
+    .contact-link-arrow {
+      text-align: right;
+      font-size: 24px;
     }
 
     footer {
@@ -330,6 +442,7 @@
     }
 
     @media (max-width: 700px) {
+
       header {
         align-items: flex-start;
         gap: 20px;
@@ -345,9 +458,19 @@
         min-height: 75vh;
       }
 
+      .category-header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
       .work-item {
         grid-template-columns: 1fr;
         gap: 10px;
+      }
+
+      .video-project-title {
+        flex-direction: column;
+        gap: 6px;
       }
 
       .award-item {
@@ -361,6 +484,15 @@
       }
 
       .press-source {
+        grid-column: 1 / 3;
+      }
+
+      .contact-link {
+        grid-template-columns: 1fr 35px;
+        gap: 10px;
+      }
+
+      .contact-link-label {
         grid-column: 1 / 3;
       }
 
@@ -390,10 +522,16 @@
     </nav>
   </header>
 
+
   <main>
 
+    <!-- HERO -->
+
     <section class="hero">
-      <div class="eyebrow">English Copywriter · Seoul</div>
+
+      <div class="eyebrow">
+        English Copywriter · Seoul
+      </div>
 
       <h1>
         Words<br>
@@ -404,14 +542,30 @@
         English copywriting, localization and transcreation
         between Korea and the world.
       </p>
+
     </section>
 
 
+    <!-- WORK -->
+
     <section id="work">
-      <div class="section-label">Selected Work</div>
+
+      <div class="section-label">
+        Selected Work
+      </div>
+
+
+      <!-- FEATURED WORK -->
+
+      <div class="featured-label">
+        Featured Work
+      </div>
 
       <div class="work-item">
-        <div class="work-year">2026</div>
+
+        <div class="work-year">
+          2026
+        </div>
 
         <div class="work-title">
           Vision Pulse
@@ -421,6 +575,7 @@
           Hyundai Motor Group<br>
           Global Creative / Copy
         </div>
+
       </div>
 
       <div class="video-wrap">
@@ -438,13 +593,139 @@
         Spikes Asia 2026 · Innovation · Bronze<br>
         The One Show 2026 · Intellectual Property &amp; Product Design · Merit
       </div>
+
+
+      <!-- COPYWRITING -->
+
+      <div class="work-category">
+
+        <div class="category-header">
+
+          <div class="category-title">
+            Copywriting
+          </div>
+
+          <div class="category-direction">
+            Original English Copy
+          </div>
+
+        </div>
+
+
+        <div class="video-project">
+
+          <div class="video-project-title">
+
+            <div class="video-project-name">
+              Selected Copywriting Work
+            </div>
+
+            <div class="video-project-number">
+              01
+            </div>
+
+          </div>
+
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/HFSVNkU2MR0"
+              title="Copywriting Work by Bomee Lee"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </div>
+
+
+        <div class="video-project">
+
+          <div class="video-project-title">
+
+            <div class="video-project-name">
+              Selected Copywriting Work
+            </div>
+
+            <div class="video-project-number">
+              02
+            </div>
+
+          </div>
+
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/3gnXu7Jo1s0"
+              title="Copywriting Work by Bomee Lee"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LOCALIZATION -->
+
+      <div class="work-category">
+
+        <div class="category-header">
+
+          <div class="category-title">
+            Localization
+          </div>
+
+          <div class="category-direction">
+            English → Korean
+          </div>
+
+        </div>
+
+        <div class="empty-category">
+          Selected work coming soon.
+        </div>
+
+      </div>
+
+
+      <!-- TRANSCREATION -->
+
+      <div class="work-category">
+
+        <div class="category-header">
+
+          <div class="category-title">
+            Transcreation
+          </div>
+
+          <div class="category-direction">
+            Korean → English
+          </div>
+
+        </div>
+
+        <div class="empty-category">
+          Selected work coming soon.
+        </div>
+
+      </div>
+
     </section>
 
 
+    <!-- ABOUT -->
+
     <section id="about">
-      <div class="section-label">About</div>
+
+      <div class="section-label">
+        About
+      </div>
 
       <div class="about-text">
+
         <p>
           Bomee Lee is a Seoul-based English copywriter with a background
           in English interpretation and translation at both undergraduate
@@ -462,12 +743,19 @@
           transcreation — reinterpreting culture, context and emotion
           to make creative ideas resonate across markets.
         </p>
+
       </div>
+
     </section>
 
 
+    <!-- AWARDS -->
+
     <section id="awards">
-      <div class="section-label">Awards &amp; Jury</div>
+
+      <div class="section-label">
+        Awards &amp; Jury
+      </div>
 
       <div class="awards">
 
@@ -502,11 +790,17 @@
         </div>
 
       </div>
+
     </section>
 
 
+    <!-- PRESS -->
+
     <section id="press">
-      <div class="section-label">Press &amp; Features</div>
+
+      <div class="section-label">
+        Press &amp; Features
+      </div>
 
       <div class="press-list">
 
@@ -590,11 +884,17 @@
         </a>
 
       </div>
+
     </section>
 
 
+    <!-- CONTACT -->
+
     <section id="contact">
-      <div class="section-label">Contact</div>
+
+      <div class="section-label">
+        Contact
+      </div>
 
       <div class="contact-title">
         Let’s make<br>
@@ -606,14 +906,68 @@
         Available for English copywriting, transcreation,
         localization and global creative projects.
       </p>
+
+
+      <div class="contact-links">
+
+        <a
+          class="contact-link"
+          href="mailto:bomeelee2@naver.com"
+        >
+
+          <div class="contact-link-label">
+            Email
+          </div>
+
+          <div class="contact-link-value">
+            bomeelee2@naver.com
+          </div>
+
+          <div class="contact-link-arrow">
+            ↗
+          </div>
+
+        </a>
+
+
+        <a
+          class="contact-link"
+          href="https://www.linkedin.com/in/bomee-lee-b074b323a/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="contact-link-label">
+            LinkedIn
+          </div>
+
+          <div class="contact-link-value">
+            Bomee Lee
+          </div>
+
+          <div class="contact-link-arrow">
+            ↗
+          </div>
+
+        </a>
+
+      </div>
+
     </section>
 
   </main>
 
 
   <footer>
-    <div>© 2026 Bomee Lee</div>
-    <div>English Copywriter · Seoul</div>
+
+    <div>
+      © 2026 Bomee Lee
+    </div>
+
+    <div>
+      English Copywriter · Seoul
+    </div>
+
   </footer>
 
 </body>

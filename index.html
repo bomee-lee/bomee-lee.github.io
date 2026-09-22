@@ -86,7 +86,7 @@
       border-bottom: 1px solid #e8e8e8;
       position: sticky;
       top: 0;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255, 255, 255, 0.96);
       z-index: 10;
     }
 
@@ -184,6 +184,28 @@
       line-height: 1.6;
     }
 
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin-top: 40px;
+      overflow: hidden;
+      background: #000000;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .project-awards {
+      margin-top: 28px;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
     .about-text {
       max-width: 980px;
       font-size: clamp(26px, 3.6vw, 52px);
@@ -274,6 +296,11 @@
       section {
         padding: 80px 0;
       }
+
+      footer {
+        gap: 20px;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -323,6 +350,22 @@
           Global Creative / Copy
         </div>
       </div>
+
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/RU9yGQeBY74"
+          title="Hyundai Motor Group Vision Pulse"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="project-awards">
+        Cannes Lions 2026 · Design Lions · Bronze<br>
+        Spikes Asia 2026 · Innovation · Bronze<br>
+        The One Show 2026 · Intellectual Property & Product Design · Finalist
+      </div>
     </section>
 
 
@@ -367,6 +410,13 @@
           <div class="award-year">2026</div>
           <div class="award-name">
             Spikes Asia · Innovation · Bronze
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-year">2026</div>
+          <div class="award-name">
+            The One Show · Intellectual Property & Product Design · Finalist
           </div>
         </div>
 
